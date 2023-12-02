@@ -15,9 +15,9 @@ for idx, line in enumerate(f.split('\n')):
             number, color = item.split(' ')
             if color == 'blue':
                 blues.append(int(number))
-            if color == 'red':
+            elif color == 'red':
                 reds.append(int(number))
-            if color == 'green':
+            elif color == 'green':
                 greens.append(int(number))
     if max(reds) <= RED_MAX and max(greens) <= GREEN_MAX and max(blues) <= BLUE_MAX:
         value += idx+1
